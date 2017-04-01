@@ -1,10 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title>我的第一个博客页面</title>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js"></script>
+  <link rel="stylesheet" href="http://typo.sofi.sh/typo.css">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <style>
+    body{
+      padding:16px;
+    }
+    img{
+      max-width:100%;
+    }
+  </style>
 </head>
 <body>
-  <h1>这里是我的博客的首页</h1>
+  <div id="app">
+# 我的第一篇博客
+    
+** 灰灰 **
+    
+__不要相信网络上的名人名言! ---鲁迅__
+    
+我今天学会了markdown  好开心
+
+<img src="http://imgsrc.baidu.com/forum/w%3D580/sign=8688bc5308d162d985ee621421dea950/ea9a8d773912b31b34d13fbe8418367adbb4e184.jpg" alt="">`
+  </div>
+   <script>
+     var app=document.getElementById("app");
+     var markdown=app.innerHTML;
+     var html=marked(markdown);
+     app.innerHTML=html;
+    
+  </script>
 </body>
 </html>
